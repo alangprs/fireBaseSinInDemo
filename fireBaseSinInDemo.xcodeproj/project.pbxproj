@@ -16,7 +16,7 @@
 		4D61D6162679B787005F48A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D61D6152679B787005F48A5 /* GoogleService-Info.plist */; };
 		4D61D61B2679BBAE005F48A5 /* sinInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61D61A2679BBAE005F48A5 /* sinInViewController.swift */; };
 		4D61D61D2679D77D005F48A5 /* editViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61D61C2679D77D005F48A5 /* editViewController.swift */; };
-		4D61D644267B2AE4005F48A5 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 4D61D643267B2AE4005F48A5 /* FacebookLogin */; };
+		4D61D644267B2AE4005F48A5 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 4D61D643267B2AE4005F48A5 /* SwiftPackageProductDependency */; };
 		D0F9E2535A0B69B0EBE40CB7 /* Pods_fireBaseSinInDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5D236593DA3D4C13D95484 /* Pods_fireBaseSinInDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D61D644267B2AE4005F48A5 /* FacebookLogin in Frameworks */,
+				4D61D644267B2AE4005F48A5 /* BuildFile in Frameworks */,
 				D0F9E2535A0B69B0EBE40CB7 /* Pods_fireBaseSinInDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,6 +114,7 @@
 				4D61D5F82679B74A005F48A5 /* Frameworks */,
 				4D61D5F92679B74A005F48A5 /* Resources */,
 				93BA851A88BA498D605FBEC5 /* [CP] Embed Pods Frameworks */,
+				F34F9DA66DC20385FA23AFC4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -121,7 +122,7 @@
 			);
 			name = fireBaseSinInDemo;
 			packageProductDependencies = (
-				4D61D643267B2AE4005F48A5 /* FacebookLogin */,
+				4D61D643267B2AE4005F48A5 /* SwiftPackageProductDependency */,
 			);
 			productName = fireBaseSinInDemo;
 			productReference = 4D61D5FB2679B74A005F48A5 /* fireBaseSinInDemo.app */;
@@ -151,7 +152,7 @@
 			);
 			mainGroup = 4D61D5F22679B74A005F48A5;
 			packageReferences = (
-				4D61D642267B2AE4005F48A5 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				4D61D642267B2AE4005F48A5 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 4D61D5FC2679B74A005F48A5 /* Products */;
 			projectDirPath = "";
@@ -214,6 +215,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fireBaseSinInDemo/Pods-fireBaseSinInDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F34F9DA66DC20385FA23AFC4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fireBaseSinInDemo/Pods-fireBaseSinInDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fireBaseSinInDemo/Pods-fireBaseSinInDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fireBaseSinInDemo/Pods-fireBaseSinInDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -433,7 +451,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4D61D642267B2AE4005F48A5 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+		4D61D642267B2AE4005F48A5 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
 			requirement = {
@@ -444,9 +462,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4D61D643267B2AE4005F48A5 /* FacebookLogin */ = {
+		4D61D643267B2AE4005F48A5 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 4D61D642267B2AE4005F48A5 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			package = 4D61D642267B2AE4005F48A5 /* RemoteSwiftPackageReference */;
 			productName = FacebookLogin;
 		};
 /* End XCSwiftPackageProductDependency section */

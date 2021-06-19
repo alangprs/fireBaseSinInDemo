@@ -7,6 +7,10 @@
 
 import UIKit
 import Firebase
+import FacebookCore
+import FacebookLogin
+import GoogleSignIn
+
 
 class sinInViewController: UIViewController {
 
@@ -17,11 +21,11 @@ class sinInViewController: UIViewController {
     @IBOutlet weak var emailTexField: UITextField!
     
     @IBOutlet weak var passWordTextField: UITextField!
-    required init?(coder:NSCoder){
-        super .init(coder: coder)
-    }
     
     @IBOutlet weak var nameTexField: UITextField!
+    
+    //FB
+    let manager = LoginManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTexField.alpha = 0 //一開始在登入選項，所以使用者名稱隱藏
@@ -150,13 +154,45 @@ class sinInViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
+        //fb登出
+//        manager.logOut()
     }
     
-    //密碼開關顯示
-    @IBAction func passWordSwitch(_ sender: UIButton) {
-       
-//        passWordTextField.isSecureTextEntry = true
+    //ＦＢ登入func
+        func logIn(permissions: [Permission] = [.publicProfile],
+                     viewController: UIViewController? = nil,
+                     completion: LoginResultBlock? = nil){
+            
+        }
+    //fb登入
+    func fBlogin() {
+        
+            let manager = LoginManager()
+            manager.logIn(permissions: [.publicProfile], viewController: self) { (result) in
+                if case LoginResult.success(granted: _, declined: _, token: _) = result {
+                    print("fb login ok")
+                    
+                    let credential =  FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
+                        Auth.auth().signIn(with: credential) { [weak self] (result, error) in
+                        guard let self = self else { return }
+                        guard error == nil else {
+                            print(error?.localizedDescription)
+                            return
+                        }
+                        print("login ok")
+                    }
+                    
+                } else {
+                    print("login fail")
+                }
+            }
     }
+     //FB登入
+    @IBAction func fbSinIn(_ sender: UIButton) {
+       fBlogin()
+       
+    }
+    
     
     
     /*

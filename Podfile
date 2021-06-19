@@ -8,5 +8,6 @@ target 'fireBaseSinInDemo' do
   # Pods for fireBaseSinInDemo
 pod ‘Firebase/Core’
  pod ‘Firebase/Auth’
+pod 'GoogleSignIn'
 
 end

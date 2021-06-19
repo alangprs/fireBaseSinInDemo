@@ -16,11 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apd" translatesAutoresizingMaskIntoConstraints="NO" id="aVJ-PY-z4t">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="apd" translatesAutoresizingMaskIntoConstraints="NO" id="aVJ-PY-z4t">
                                 <rect key="frame" x="40" y="134" width="334" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vlo-8w-hei">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vlo-8w-hei">
                                 <rect key="frame" x="100" y="329" width="214" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="登入"/>
                                     <segment title="註冊"/>
@@ -29,120 +31,84 @@
                                     <action selector="judgmentChoose:" destination="DAi-CM-PRq" eventType="valueChanged" id="8IZ-Cm-1zz"/>
                                 </connections>
                             </segmentedControl>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="gQ4-0f-W6C">
-                                <rect key="frame" x="100" y="396" width="214" height="226"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Iqq-3F-Zwe">
-                                        <rect key="frame" x="0.0" y="0.0" width="214" height="66"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="帳號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcQ-wl-b7n">
-                                                <rect key="frame" x="0.0" y="0.0" width="214" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CPa-zJ-VOs">
-                                                <rect key="frame" x="0.0" y="32" width="145" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="145" id="r5B-fs-lKX"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="GcQ-wl-b7n" firstAttribute="leading" secondItem="Iqq-3F-Zwe" secondAttribute="leading" id="7vH-Xw-7mb"/>
-                                            <constraint firstAttribute="trailing" secondItem="GcQ-wl-b7n" secondAttribute="trailing" id="MOU-hZ-KDV"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3OT-Sv-eyt">
-                                        <rect key="frame" x="0.0" y="83" width="214" height="63"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNM-Mz-JCr">
-                                                <rect key="frame" x="0.0" y="0.0" width="41" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UnC-vS-vhI">
-                                                <rect key="frame" x="0.0" y="29" width="145" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="145" id="xFw-XQ-tJ1"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NV0-T3-rCZ">
-                                        <rect key="frame" x="0.0" y="163" width="214" height="63"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用者名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x42-hS-F0S">
-                                                <rect key="frame" x="0.0" y="0.0" width="102" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入使用者名稱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t5j-X9-7Il">
-                                                <rect key="frame" x="0.0" y="29" width="145" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="145" id="Yiy-44-fbf"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="bfz-NU-o3W">
-                                <rect key="frame" x="100" y="657" width="214" height="146"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2D8-DM-SjB">
-                                        <rect key="frame" x="0.0" y="0.0" width="214" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="確認"/>
-                                        <connections>
-                                            <action selector="enter:" destination="DAi-CM-PRq" eventType="touchUpInside" id="NYn-q0-OZJ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbn-Vm-EXA">
-                                        <rect key="frame" x="0.0" y="55" width="214" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="修改密碼"/>
-                                        <connections>
-                                            <action selector="eidtPassWord:" destination="DAi-CM-PRq" eventType="touchUpInside" id="0WG-aY-Sfn"/>
-                                            <segue destination="3lY-qL-XxU" kind="show" id="woD-Y3-VXZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2S-aE-mwB">
-                                        <rect key="frame" x="0.0" y="110" width="214" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="登出"/>
-                                        <connections>
-                                            <action selector="sinOut:" destination="DAi-CM-PRq" eventType="touchUpInside" id="0uB-bZ-Lw5"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="帳號" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcQ-wl-b7n">
+                                <rect key="frame" x="100" y="395" width="41" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CPa-zJ-VOs">
+                                <rect key="frame" x="100" y="427" width="214" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="密碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNM-Mz-JCr">
+                                <rect key="frame" x="100" y="478" width="41" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UnC-vS-vhI">
+                                <rect key="frame" x="100" y="507" width="214" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="使用者名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x42-hS-F0S">
+                                <rect key="frame" x="100" y="558" width="102" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入使用者名稱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t5j-X9-7Il">
+                                <rect key="frame" x="100" y="587" width="214" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxn-c3-nJe">
+                                <rect key="frame" x="210" y="641" width="104" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Facebook" image="facebook-sign-in-button"/>
+                                <connections>
+                                    <action selector="fbSinIn:" destination="DAi-CM-PRq" eventType="touchUpInside" id="uBY-Re-M0s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2D8-DM-SjB">
+                                <rect key="frame" x="95" y="641" width="82" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="確認"/>
+                                <connections>
+                                    <action selector="enter:" destination="DAi-CM-PRq" eventType="touchUpInside" id="NYn-q0-OZJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbn-Vm-EXA">
+                                <rect key="frame" x="95" y="685" width="82" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="修改密碼"/>
+                                <connections>
+                                    <action selector="eidtPassWord:" destination="DAi-CM-PRq" eventType="touchUpInside" id="0WG-aY-Sfn"/>
+                                    <segue destination="3lY-qL-XxU" kind="show" id="woD-Y3-VXZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2S-aE-mwB">
+                                <rect key="frame" x="95" y="739" width="82" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="登出"/>
+                                <connections>
+                                    <action selector="sinOut:" destination="DAi-CM-PRq" eventType="touchUpInside" id="0uB-bZ-Lw5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OeV-5t-sY0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="OeV-5t-sY0" firstAttribute="trailing" secondItem="bfz-NU-o3W" secondAttribute="trailing" constant="100" id="7uj-dA-8WA"/>
-                            <constraint firstItem="Vlo-8w-hei" firstAttribute="top" secondItem="aVJ-PY-z4t" secondAttribute="bottom" constant="37" id="IId-2y-IDd"/>
-                            <constraint firstAttribute="trailing" secondItem="aVJ-PY-z4t" secondAttribute="trailing" constant="40" id="LcS-bj-PlU"/>
-                            <constraint firstItem="aVJ-PY-z4t" firstAttribute="top" secondItem="OeV-5t-sY0" secondAttribute="top" constant="46" id="Ri4-kg-R26"/>
-                            <constraint firstItem="aVJ-PY-z4t" firstAttribute="leading" secondItem="I3E-P4-6pk" secondAttribute="leading" constant="40" id="SBd-6p-Nat"/>
-                            <constraint firstItem="bfz-NU-o3W" firstAttribute="leading" secondItem="OeV-5t-sY0" secondAttribute="leading" constant="100" id="fft-Vh-Xmv"/>
-                            <constraint firstItem="gQ4-0f-W6C" firstAttribute="leading" secondItem="OeV-5t-sY0" secondAttribute="leading" constant="100" id="lYJ-Lc-gGi"/>
-                            <constraint firstItem="bfz-NU-o3W" firstAttribute="top" secondItem="gQ4-0f-W6C" secondAttribute="bottom" constant="35" id="n5u-DE-4Sf"/>
-                            <constraint firstItem="Vlo-8w-hei" firstAttribute="top" secondItem="I3E-P4-6pk" secondAttribute="top" constant="329" id="ngA-zh-KKb"/>
-                            <constraint firstItem="gQ4-0f-W6C" firstAttribute="top" secondItem="Vlo-8w-hei" secondAttribute="bottom" constant="36" id="quF-sB-00z"/>
-                            <constraint firstItem="Vlo-8w-hei" firstAttribute="centerX" secondItem="I3E-P4-6pk" secondAttribute="centerX" id="rVV-Ww-F61"/>
-                            <constraint firstItem="Vlo-8w-hei" firstAttribute="leading" secondItem="OeV-5t-sY0" secondAttribute="leading" constant="100" id="vHc-cT-afN"/>
-                            <constraint firstItem="OeV-5t-sY0" firstAttribute="trailing" secondItem="gQ4-0f-W6C" secondAttribute="trailing" constant="100" id="yS2-pn-1xL"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qfj-3F-CDy"/>
                     <connections>
@@ -242,6 +208,7 @@
     </scenes>
     <resources>
         <image name="apd" width="800" height="600"/>
+        <image name="facebook-sign-in-button" width="800" height="300"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
